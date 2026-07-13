@@ -13,7 +13,11 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.qepresent.fileheaderadder.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.qepresent.fileheaderadder.startup.MyProjectActivity" />
+        <applicationService serviceImplementation="com.github.qepresent.fileheaderadder.settings.HeaderSettings"/>
+        <applicationConfigurable
+            parentId="tools"
+            instance="com.github.qepresent.fileheaderadder.settings.HeaderSettingsConfigurable"
+            id="FileHeaderSettingss"
+            displayName="File Header"
     </extensions>
 </idea-plugin>
