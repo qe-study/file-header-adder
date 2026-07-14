@@ -17,7 +17,18 @@
         <applicationConfigurable
             parentId="tools"
             instance="com.github.qepresent.fileheaderadder.settings.HeaderSettingsConfigurable"
-            id="FileHeaderSettingss"
-            displayName="File Header"
+            id="FileHeaderSettings"
+            displayName="File Header"/>
     </extensions>
+    <actions>
+        <action
+                id="com.github.qepresent.fileheaderadder"
+                class="com.github.qepresent.fileheaderadder.actions.FileHeader"
+                text="Add File Header"
+                description="Insert file header with author,date,company"
+        >
+<!--            编辑器右键菜单-->
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>
