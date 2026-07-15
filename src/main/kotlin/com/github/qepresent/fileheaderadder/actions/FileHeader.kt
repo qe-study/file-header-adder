@@ -31,6 +31,7 @@ class FileHeader : AnAction(){
         }
     }
     private fun getHeader(psiFile: PsiFile):String{
+        //数据
         val settings= HeaderSettings.getInstance()
         val fileName=psiFile.name
         val date= SimpleDateFormat(settings.dateFormat).format(Date())
@@ -64,6 +65,7 @@ class FileHeader : AnAction(){
     }
     private fun calculateOffset(document: Document): Int{
         val text = document.text
+        // 考虑开头
         if(text.startsWith("#!")){
             val firstNewLine=text.indexOf('\n')
             if(firstNewLine!=-1){
